@@ -112,8 +112,7 @@ const PRINCIPLES = [
 const STATS = [
   { value: "120+", label: "Projects delivered" },
   { value: "38", label: "Brands partnered" },
-  { value: "9", label: "Industry awards" },
-  { value: "4.2×", label: "Avg. campaign ROI" },
+  { value: "100M+", label: "Views generated" },
 ];
 
 export default function Home() {

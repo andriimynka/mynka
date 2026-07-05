@@ -28,7 +28,7 @@
 @media (prefers-reduced-motion: reduce) {
   .btn:hover,
   .service-card:hover,
-  .work-card-has-video:hover,
+  .work-card:hover,
   .work-close:hover,
   .stat:hover {
     animation: none !important;
@@ -578,7 +578,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
   border-color: rgba(20, 5, 14, 0.35);
 }
 
-.work-card-has-video:hover {
+.work-card:hover:not(.work-card-playing) {
   animation: shake 0.35s linear infinite;
 }
 
