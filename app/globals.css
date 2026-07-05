@@ -1036,9 +1036,20 @@ h1, h2, h3, .nav-logo, .footer-logo {
 
 /* ---------- small screens ---------- */
 
+/* mobile: links drop to their own row under the bar */
 @media (max-width: 820px) {
+  .nav {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
   .nav-links {
-    display: none;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
   }
 }
 

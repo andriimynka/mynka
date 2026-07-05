@@ -28,7 +28,8 @@
       "Bash(git commit -m 'Flat light-pink work and testimonial cards with black outlines *)",
       "Bash(git commit -m 'Process: plain numbers 1-4, animated dotted roadmap connecting steps *)",
       "Bash(git commit -m 'Scrollable logo bar, hide roadmap on mobile, nav scanlines *)",
-      "Bash(git commit -m 'Logo bar: infinite auto-scroll plus manual scroll; nav hidden until scroll *)"
+      "Bash(git commit -m 'Logo bar: infinite auto-scroll plus manual scroll; nav hidden until scroll *)",
+      "Bash(git commit -m 'Mobile nav links row under the top bar *)"
     ]
   }
 }
