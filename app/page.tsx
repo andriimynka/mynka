@@ -1,6 +1,7 @@
 import GradientBackground from "@/components/GradientBackground";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
+import WorkCard from "@/components/WorkCard";
 
 const SERVICES = [
   {
@@ -25,13 +26,16 @@ const SERVICES = [
   },
 ];
 
+// Paste a YouTube link into `video` (any format: youtube.com/watch?v=...,
+// youtu.be/..., or a Shorts link) and that square becomes playable.
+// Leave it as "" to show the card without a play button.
 const WORK = [
-  { tag: "Brand Film", title: "Neon District", client: "Streetwear launch", theme: "work-card-1" },
-  { tag: "TV Spot", title: "Full Volume", client: "Audio hardware", theme: "work-card-2" },
-  { tag: "Social Campaign", title: "48 Hours In", client: "Travel platform", theme: "work-card-3" },
-  { tag: "Product Launch", title: "First Light", client: "EV startup", theme: "work-card-4" },
-  { tag: "Documentary", title: "Makers of the City", client: "Cultural fund", theme: "work-card-5" },
-  { tag: "Music Video", title: "Static Bloom", client: "Recording artist", theme: "work-card-6" },
+  { tag: "Brand Film", title: "Neon District", client: "Streetwear launch", theme: "work-card-1", video: "" },
+  { tag: "TV Spot", title: "Full Volume", client: "Audio hardware", theme: "work-card-2", video: "" },
+  { tag: "Social Campaign", title: "48 Hours In", client: "Travel platform", theme: "work-card-3", video: "" },
+  { tag: "Product Launch", title: "First Light", client: "EV startup", theme: "work-card-4", video: "" },
+  { tag: "Documentary", title: "Makers of the City", client: "Cultural fund", theme: "work-card-5", video: "" },
+  { tag: "Music Video", title: "Static Bloom", client: "Recording artist", theme: "work-card-6", video: "" },
 ];
 
 const PROCESS = [
@@ -149,17 +153,7 @@ export default function Home() {
           <div className="work-grid">
             {WORK.map((w, i) => (
               <Reveal key={w.title} delay={(i % 3) * 100}>
-                <article className={`work-card ${w.theme}`}>
-                  <div className="work-card-glow" />
-                  <span className="work-tag">{w.tag}</span>
-                  <div className="work-meta">
-                    <h3>{w.title}</h3>
-                    <p>{w.client}</p>
-                  </div>
-                  <span className="work-play" aria-hidden="true">
-                    ▶
-                  </span>
-                </article>
+                <WorkCard {...w} />
               </Reveal>
             ))}
           </div>
