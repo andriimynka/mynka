@@ -9,7 +9,9 @@
       "Bash(git add *)",
       "Bash(git commit -m 'Switch to Neue Haas Grotesk font stack, make buttons solid pink *)",
       "Bash(git commit -m 'Replace gradient blobs with corner-to-corner diagonal energy flow *)",
-      "Bash(git commit -m 'Add smooth trailing lag to mouse-follow glow, time-based easing *)"
+      "Bash(git commit -m 'Add smooth trailing lag to mouse-follow glow, time-based easing *)",
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(git commit -m 'Add '\\\\''How we work'\\\\'' section: no AI, owner-run, no blind outsourcing *)"
     ]
   }
 }

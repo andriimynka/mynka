@@ -6,6 +6,7 @@ const LINKS = [
   { href: "#services", label: "Services" },
   { href: "#work", label: "Work" },
   { href: "#process", label: "Process" },
+  { href: "#how-we-work", label: "How we work" },
 ];
 
 export default function Nav() {

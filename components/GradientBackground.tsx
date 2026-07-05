@@ -16,6 +16,8 @@ const PALETTES: Palette[] = [
   { g1: [139, 92, 246], g2: [34, 211, 238], g3: [255, 45, 125], base: [7, 6, 20] },
   // process — deep blue / pink
   { g1: [56, 189, 248], g2: [255, 45, 125], g3: [99, 60, 220], base: [4, 8, 20] },
+  // how we work — deep crimson / pink
+  { g1: [255, 45, 125], g2: [220, 38, 80], g3: [124, 58, 237], base: [14, 3, 10] },
   // contact — full hot pink send-off
   { g1: [255, 20, 147], g2: [255, 94, 58], g3: [120, 30, 220], base: [18, 3, 12] },
 ];

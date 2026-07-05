@@ -626,6 +626,39 @@ h1, h2, h3, .nav-logo, .footer-logo {
   max-width: 560px;
 }
 
+/* ---------- how we work ---------- */
+
+.principles {
+  display: grid;
+  gap: 0;
+}
+
+.principle-item {
+  padding: clamp(40px, 7vh, 64px) 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.principle-item:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.principle-item h3 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.principle-item h3::first-letter {
+  color: var(--pink);
+}
+
+.principle-item p {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--text-dim);
+  max-width: 680px;
+}
+
 .stats-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

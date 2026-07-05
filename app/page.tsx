@@ -57,6 +57,21 @@ const PROCESS = [
   },
 ];
 
+const PRINCIPLES = [
+  {
+    title: "No AI. Anywhere.",
+    body: "We do not use AI to write scripts or make videos. People write the words. People shoot the film. People do the edit. That is the whole point of hiring us.",
+  },
+  {
+    title: "The owner runs every project.",
+    body: "MYNKA is owner-run. I am in every project from the first call to the final cut. Nothing goes to a client before I have seen it myself.",
+  },
+  {
+    title: "No blind outsourcing.",
+    body: "Your project does not get passed to a team overseas you will never meet. The people you talk to are the people who do the work.",
+  },
+];
+
 const STATS = [
   { value: "120+", label: "Projects delivered" },
   { value: "38", label: "Brands partnered" },
@@ -162,7 +177,7 @@ export default function Home() {
         {/* PROCESS */}
         <section className="section" id="process" data-palette>
           <Reveal>
-            <p className="eyebrow">How we work</p>
+            <p className="eyebrow">Our process</p>
             <h2 className="section-title">
               A process built
               <br />
@@ -188,6 +203,24 @@ export default function Home() {
                 <div className="stat">
                   <span className="stat-value">{s.value}</span>
                   <span className="stat-label">{s.label}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* HOW WE WORK */}
+        <section className="section" id="how-we-work" data-palette>
+          <Reveal>
+            <p className="eyebrow">Our promise</p>
+            <h2 className="section-title">How we work.</h2>
+          </Reveal>
+          <div className="principles">
+            {PRINCIPLES.map((p, i) => (
+              <Reveal key={p.title} delay={i * 100}>
+                <div className="principle-item">
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
                 </div>
               </Reveal>
             ))}
