@@ -7,21 +7,22 @@ type Palette = { g1: RGB; g2: RGB; g3: RGB; base: RGB };
 
 // One palette per page section, in document order. As the viewport center
 // travels between sections the background lerps between adjacent palettes.
+// Light theme: bases are near-white pastels, hue colors tint the faint layers.
 const PALETTES: Palette[] = [
   // hero — hot pink / violet
-  { g1: [255, 45, 125], g2: [124, 58, 237], g3: [212, 20, 90], base: [12, 4, 16] },
+  { g1: [255, 45, 125], g2: [124, 58, 237], g3: [212, 20, 90], base: [250, 243, 248] },
   // services — pink / molten orange
-  { g1: [255, 107, 53], g2: [255, 45, 125], g3: [138, 43, 226], base: [16, 5, 10] },
+  { g1: [255, 107, 53], g2: [255, 45, 125], g3: [138, 43, 226], base: [252, 246, 242] },
   // work — electric violet / cyan
-  { g1: [139, 92, 246], g2: [34, 211, 238], g3: [255, 45, 125], base: [7, 6, 20] },
+  { g1: [139, 92, 246], g2: [34, 211, 238], g3: [255, 45, 125], base: [246, 244, 252] },
   // testimonials — cyan / pink
-  { g1: [34, 211, 238], g2: [255, 45, 125], g3: [139, 92, 246], base: [5, 10, 18] },
+  { g1: [34, 211, 238], g2: [255, 45, 125], g3: [139, 92, 246], base: [242, 250, 252] },
   // process — deep blue / pink
-  { g1: [56, 189, 248], g2: [255, 45, 125], g3: [99, 60, 220], base: [4, 8, 20] },
+  { g1: [56, 189, 248], g2: [255, 45, 125], g3: [99, 60, 220], base: [244, 247, 252] },
   // how we work — deep crimson / pink
-  { g1: [255, 45, 125], g2: [220, 38, 80], g3: [124, 58, 237], base: [14, 3, 10] },
+  { g1: [255, 45, 125], g2: [220, 38, 80], g3: [124, 58, 237], base: [252, 243, 246] },
   // contact — full hot pink send-off
-  { g1: [255, 20, 147], g2: [255, 94, 58], g3: [120, 30, 220], base: [18, 3, 12] },
+  { g1: [255, 20, 147], g2: [255, 94, 58], g3: [120, 30, 220], base: [253, 242, 249] },
 ];
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
