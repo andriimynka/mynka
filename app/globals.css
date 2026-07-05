@@ -62,35 +62,60 @@ h1, h2, h3, .nav-logo, .footer-logo {
 
 .gradient-layer {
   position: absolute;
-  inset: -20%;
-  will-change: transform;
+  inset: 0;
 }
 
-.blob-1 {
-  background: radial-gradient(
-    45% 45% at 22% 24%,
-    rgba(var(--g1), 0.55) 0%,
-    transparent 70%
+/* one large diagonal current running corner to corner */
+.flow {
+  background: linear-gradient(
+    125deg,
+    rgba(var(--g1), 0.6) 0%,
+    rgba(var(--g2), 0.3) 30%,
+    rgba(var(--base), 0) 52%,
+    rgba(var(--g2), 0.22) 72%,
+    rgba(var(--g3), 0.55) 100%
   );
-  animation: drift-1 26s ease-in-out infinite alternate;
+  background-size: 240% 240%;
+  animation: flow 20s ease-in-out infinite alternate;
+  will-change: background-position;
 }
 
-.blob-2 {
-  background: radial-gradient(
-    40% 45% at 78% 30%,
-    rgba(var(--g2), 0.45) 0%,
-    transparent 70%
-  );
-  animation: drift-2 32s ease-in-out infinite alternate;
+@keyframes flow {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
 }
 
-.blob-3 {
+/* glowing anchors where the energy enters and exits */
+.corner-a {
   background: radial-gradient(
-    50% 40% at 50% 88%,
-    rgba(var(--g3), 0.4) 0%,
-    transparent 70%
+    75% 75% at 0% 0%,
+    rgba(var(--g1), 0.5) 0%,
+    transparent 65%
   );
-  animation: drift-3 38s ease-in-out infinite alternate;
+  animation: breathe-a 14s ease-in-out infinite alternate;
+  transform-origin: top left;
+  will-change: transform, opacity;
+}
+
+.corner-b {
+  background: radial-gradient(
+    75% 75% at 100% 100%,
+    rgba(var(--g3), 0.45) 0%,
+    transparent 65%
+  );
+  animation: breathe-b 17s ease-in-out infinite alternate;
+  transform-origin: bottom right;
+  will-change: transform, opacity;
+}
+
+@keyframes breathe-a {
+  from { transform: scale(1); opacity: 0.85; }
+  to { transform: scale(1.25); opacity: 1; }
+}
+
+@keyframes breathe-b {
+  from { transform: scale(1.2); opacity: 1; }
+  to { transform: scale(1); opacity: 0.8; }
 }
 
 .mouse-glow {
@@ -107,21 +132,6 @@ h1, h2, h3, .nav-logo, .footer-logo {
   inset: 0;
   opacity: 0.5;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-@keyframes drift-1 {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(6%, 9%) scale(1.15); }
-}
-
-@keyframes drift-2 {
-  from { transform: translate(0, 0) scale(1.1); }
-  to { transform: translate(-8%, 6%) scale(0.95); }
-}
-
-@keyframes drift-3 {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(4%, -7%) scale(1.2); }
 }
 
 @media (prefers-reduced-motion: reduce) {

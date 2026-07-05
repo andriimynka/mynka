@@ -93,9 +93,9 @@ export default function GradientBackground() {
 
   return (
     <div ref={ref} className="gradient-bg" aria-hidden="true">
-      <div className="gradient-layer blob-1" />
-      <div className="gradient-layer blob-2" />
-      <div className="gradient-layer blob-3" />
+      <div className="gradient-layer flow" />
+      <div className="gradient-layer corner-a" />
+      <div className="gradient-layer corner-b" />
       <div className="gradient-layer mouse-glow" />
       <div className="grain" />
     </div>
