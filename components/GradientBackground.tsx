@@ -39,6 +39,9 @@ export default function GradientBackground() {
     let current = 0; // smoothed palette position
     let mouseX = 0.5;
     let mouseY = 0.35;
+    // glow position trails the cursor, easing toward it each frame
+    let glowX = mouseX;
+    let glowY = mouseY;
 
     const target = () => {
       const sections = Array.from(
@@ -58,10 +61,18 @@ export default function GradientBackground() {
       return 0;
     };
 
-    const frame = () => {
+    let last = performance.now();
+
+    const frame = (now: number) => {
+      // time-based easing so the lag feels the same at any refresh rate
+      const dt = Math.min((now - last) / 1000, 0.1);
+      last = now;
+      const kScroll = 1 - Math.exp(-dt / 0.25);
+      const kGlow = 1 - Math.exp(-dt / 0.4);
+
       const t = target();
       // ease toward the target so fast scrolling still feels fluid
-      current += (t - current) * 0.07;
+      current += (t - current) * kScroll;
 
       const i = Math.min(Math.floor(current), PALETTES.length - 2);
       const f = Math.min(Math.max(current - i, 0), 1);
@@ -72,8 +83,10 @@ export default function GradientBackground() {
       el.style.setProperty("--g2", css(lerpRGB(a.g2, b.g2, f)));
       el.style.setProperty("--g3", css(lerpRGB(a.g3, b.g3, f)));
       el.style.setProperty("--base", css(lerpRGB(a.base, b.base, f)));
-      el.style.setProperty("--mx", `${mouseX * 100}%`);
-      el.style.setProperty("--my", `${mouseY * 100}%`);
+      glowX += (mouseX - glowX) * kGlow;
+      glowY += (mouseY - glowY) * kGlow;
+      el.style.setProperty("--mx", `${glowX * 100}%`);
+      el.style.setProperty("--my", `${glowY * 100}%`);
 
       raf = requestAnimationFrame(frame);
     };
