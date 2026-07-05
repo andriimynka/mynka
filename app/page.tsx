@@ -138,7 +138,7 @@ export default function Home() {
               </div>
             ) : (
               <div className="hero-video">
-                <span className="hero-video-note">[ header video ]</span>
+                <span className="hero-video-note">Header video coming soon</span>
               </div>
             )}
           </Reveal>

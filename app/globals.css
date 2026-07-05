@@ -311,15 +311,6 @@ h1, h2, h3, .nav-logo, .footer-logo {
   margin-bottom: 20px;
 }
 
-.eyebrow::before {
-  content: "[ ";
-  color: var(--cyan);
-}
-
-.eyebrow::after {
-  content: " ]";
-  color: var(--cyan);
-}
 
 .section-title {
   font-size: clamp(2rem, 5vw, 3.6rem);
