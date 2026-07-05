@@ -358,7 +358,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 120px clamp(20px, 5vw, 64px) 40px;
+  padding: clamp(170px, 24vh, 280px) clamp(20px, 5vw, 64px) 40px;
 }
 
 .hero-wordmark {
@@ -367,7 +367,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
   line-height: 0.95;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-bottom: clamp(20px, 4vh, 40px);
+  margin-bottom: clamp(70px, 13vh, 150px);
 }
 
 .hero-wordmark-dot {
@@ -876,11 +876,10 @@ h1, h2, h3, .nav-logo, .footer-logo {
     position: relative;
   }
 
-  /* hero: video slot shoved right and pulled up under the wordmark */
+  /* hero: video slot shoved right, clear of the wordmark */
   .hero-video {
     width: 88%;
     margin-left: 12%;
-    margin-top: clamp(-70px, -4vw, -28px);
   }
 
   .statement {
