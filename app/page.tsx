@@ -138,7 +138,7 @@ export default function Home() {
               </div>
             ) : (
               <div className="hero-video">
-                <span className="hero-video-note">Header video coming soon</span>
+                
               </div>
             )}
           </Reveal>
@@ -192,7 +192,6 @@ export default function Home() {
         {/* SERVICES */}
         <section className="section" id="services" data-palette>
           <Reveal>
-            <p className="eyebrow">What we do</p>
             <h2 className="section-title">
               You need it,
               <br />
@@ -215,7 +214,6 @@ export default function Home() {
         {/* WORK */}
         <section className="section" id="work" data-palette>
           <Reveal>
-            <p className="eyebrow">Selected work</p>
             <h2 className="section-title">
               Some things we do.
               <br />
@@ -234,7 +232,6 @@ export default function Home() {
         {/* TESTIMONIALS */}
         <section className="section" id="testimonials" data-palette>
           <Reveal>
-            <p className="eyebrow">Client stories</p>
             <h2 className="section-title">
               Hear it from
               <br />
@@ -253,7 +250,6 @@ export default function Home() {
         {/* PROCESS */}
         <section className="section" id="process" data-palette>
           <Reveal>
-            <p className="eyebrow">Our process</p>
             <h2 className="section-title">
               You work fast
               <br />
@@ -288,7 +284,6 @@ export default function Home() {
         {/* HOW WE WORK */}
         <section className="section" id="how-we-work" data-palette>
           <Reveal>
-            <p className="eyebrow">Our promise</p>
             <h2 className="section-title">How we work.</h2>
           </Reveal>
           <div className="principles">
@@ -306,7 +301,6 @@ export default function Home() {
         {/* CONTACT */}
         <section className="section contact" id="contact" data-palette>
           <Reveal>
-            <p className="eyebrow">Let&apos;s talk</p>
             <h2 className="contact-title">
               Got a story
               <br />

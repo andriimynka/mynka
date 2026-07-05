@@ -20,7 +20,10 @@
       "Bash(git commit -m 'Bigger header video covers wordmark; wordmark fades on scroll; shorter mobile hero runway *)",
       "Bash(git commit -m 'Update site copy: services, work, process, principles *)",
       "Bash(git push *)",
-      "Bash(git commit -m 'Replace text marquee with auto-loading client logo marquee from /public/logos *)"
+      "Bash(git commit -m 'Replace text marquee with auto-loading client logo marquee from /public/logos *)",
+      "Bash(sed -i '' '/<p className=\"eyebrow\">/d' app/page.tsx)",
+      "Bash(sed -i '' 's|<span className=\"hero-video-note\">Header video coming soon</span>||' app/page.tsx)",
+      "Bash(git commit -m 'Remove eyebrow labels and video placeholder text entirely *)"
     ]
   }
 }
