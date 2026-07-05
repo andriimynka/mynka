@@ -1,5 +1,6 @@
 import GradientBackground from "@/components/GradientBackground";
 import HeroWordmark from "@/components/HeroWordmark";
+import LogoMarquee from "@/components/LogoMarquee";
 import Nav from "@/components/Nav";
 import ProcessRoadmap from "@/components/ProcessRoadmap";
 import Reveal from "@/components/Reveal";
@@ -174,20 +175,7 @@ export default function Home() {
         </section>
 
         {/* CLIENT LOGO MARQUEE */}
-        {logos.length > 0 && (
-          <div className="marquee logo-marquee" aria-label="Our clients">
-            <div className="marquee-track logo-track">
-              {logos.map((logo, i) => (
-                <img
-                  key={i}
-                  className="client-logo"
-                  src={logo.src}
-                  alt={logo.alt}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+        <LogoMarquee logos={logos} />
 
         {/* SERVICES */}
         <section className="section" id="services" data-palette>

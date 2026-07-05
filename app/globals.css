@@ -192,7 +192,15 @@ h1, h2, h3, .nav-logo, .footer-logo {
   align-items: center;
   justify-content: space-between;
   padding: 22px clamp(20px, 5vw, 64px);
-  transition: background 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease,
+    padding 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* hidden until the user starts scrolling */
+.nav-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* scanlines like the background, a touch lighter so the bar reads distinct */

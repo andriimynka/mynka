@@ -20,7 +20,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <header className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
+    <header className={`nav ${scrolled ? "nav-scrolled" : "nav-hidden"}`}>
       <a href="#top" className="nav-logo">
         MYNKA<span className="nav-logo-dot">.</span>
       </a>
