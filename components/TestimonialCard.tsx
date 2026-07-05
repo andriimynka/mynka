@@ -3,16 +3,18 @@
 import { useState } from "react";
 import { getYouTubeId } from "./youtube";
 
-export default function WorkCard({
-  tag,
-  title,
-  client,
+export default function TestimonialCard({
+  num,
+  name,
+  role,
+  quote,
   theme,
   video,
 }: {
-  tag: string;
-  title: string;
-  client: string;
+  num: string;
+  name: string;
+  role: string;
+  quote: string;
   theme: string;
   video: string;
 }) {
@@ -21,18 +23,18 @@ export default function WorkCard({
 
   if (playing && videoId) {
     return (
-      <article className={`work-card work-card-playing ${theme}`}>
+      <article className={`work-card testimonial-card work-card-playing ${theme}`}>
         <iframe
           className="work-video"
           src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
-          title={title}
+          title={`${name} testimonial`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
         <button
           className="work-close"
           onClick={() => setPlaying(false)}
-          aria-label={`Close ${title} video`}
+          aria-label={`Close ${name} testimonial video`}
         >
           ✕
         </button>
@@ -42,7 +44,9 @@ export default function WorkCard({
 
   return (
     <article
-      className={`work-card ${theme} ${videoId ? "work-card-has-video" : ""}`}
+      className={`work-card testimonial-card ${theme} ${
+        videoId ? "work-card-has-video" : ""
+      }`}
       onClick={() => videoId && setPlaying(true)}
       role={videoId ? "button" : undefined}
       tabIndex={videoId ? 0 : undefined}
@@ -54,10 +58,11 @@ export default function WorkCard({
       }}
     >
       <div className="work-card-glow" />
-      <span className="work-tag">{tag}</span>
+      <span className="work-tag">Client {num}</span>
       <div className="work-meta">
-        <h3>{title}</h3>
-        <p>{client}</p>
+        <p className="testimonial-quote">&ldquo;{quote}&rdquo;</p>
+        <h3>{name}</h3>
+        <p>{role}</p>
       </div>
       {videoId && (
         <span className="work-play" aria-hidden="true">

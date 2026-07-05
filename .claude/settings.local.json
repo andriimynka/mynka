@@ -12,7 +12,8 @@
       "Bash(git commit -m 'Add smooth trailing lag to mouse-follow glow, time-based easing *)",
       "Bash(./node_modules/.bin/tsc --noEmit)",
       "Bash(git commit -m 'Add '\\\\''How we work'\\\\'' section: no AI, owner-run, no blind outsourcing *)",
-      "Bash(git commit -m 'Y2K redesign: sharp corners, mono accents, hard shadows, scanlines, shake hovers, solid text colors *)"
+      "Bash(git commit -m 'Y2K redesign: sharp corners, mono accents, hard shadows, scanlines, shake hovers, solid text colors *)",
+      "Bash(git commit -m 'Restructure hero: MYNKA wordmark + header video slot; add staggered video testimonials; drop TM marks *)"
     ]
   }
 }

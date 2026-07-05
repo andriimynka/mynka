@@ -1,7 +1,13 @@
 import GradientBackground from "@/components/GradientBackground";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
+import TestimonialCard from "@/components/TestimonialCard";
 import WorkCard from "@/components/WorkCard";
+import { getYouTubeId } from "@/components/youtube";
+
+// Paste a YouTube link here and the header video slot under the MYNKA
+// wordmark will play it (muted, looping). Leave "" for the placeholder.
+const HERO_VIDEO = "";
 
 const SERVICES = [
   {
@@ -36,6 +42,35 @@ const WORK = [
   { tag: "Product Launch", title: "First Light", client: "EV startup", theme: "work-card-4", video: "" },
   { tag: "Documentary", title: "Makers of the City", client: "Cultural fund", theme: "work-card-5", video: "" },
   { tag: "Music Video", title: "Static Bloom", client: "Recording artist", theme: "work-card-6", video: "" },
+];
+
+// Paste a YouTube link into `video` for each client testimonial.
+// The box becomes playable once a link is in.
+const TESTIMONIALS = [
+  {
+    num: "01",
+    name: "Client Name",
+    role: "Role, Company",
+    quote: "They made the whole shoot easy. The film did its job.",
+    theme: "testi-1",
+    video: "",
+  },
+  {
+    num: "02",
+    name: "Client Name",
+    role: "Role, Company",
+    quote: "Clear plan, clear price, and a result we still use.",
+    theme: "testi-2",
+    video: "",
+  },
+  {
+    num: "03",
+    name: "Client Name",
+    role: "Role, Company",
+    quote: "One call with the owner and we knew we were set.",
+    theme: "testi-3",
+    video: "",
+  },
 ];
 
 const PROCESS = [
@@ -88,23 +123,46 @@ export default function Home() {
         {/* HERO */}
         <section className="hero" data-palette>
           <Reveal>
-            <p className="eyebrow">Video Production × Advertising</p>
+            <h1 className="hero-wordmark">
+              MYNKA<span className="hero-wordmark-dot">.</span>
+            </h1>
           </Reveal>
-          <Reveal delay={100}>
-            <h1 className="hero-title">
+          <Reveal delay={150}>
+            {getYouTubeId(HERO_VIDEO) ? (
+              <div className="hero-video">
+                <iframe
+                  className="work-video"
+                  src={`https://www.youtube-nocookie.com/embed/${getYouTubeId(HERO_VIDEO)}?autoplay=1&mute=1&loop=1&playlist=${getYouTubeId(HERO_VIDEO)}&controls=0&rel=0`}
+                  title="MYNKA showreel"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ) : (
+              <div className="hero-video">
+                <span className="hero-video-note">[ header video ]</span>
+              </div>
+            )}
+          </Reveal>
+        </section>
+
+        {/* STATEMENT */}
+        <section className="section statement">
+          <Reveal>
+            <h2 className="hero-title">
               We make brands
               <br />
               <em>impossible</em> to ignore.
-            </h1>
+            </h2>
           </Reveal>
-          <Reveal delay={200}>
+          <Reveal delay={100}>
             <p className="hero-sub">
               MYNKA is a video production and advertising agency. We turn bold
               ideas into films, commercials, and campaigns that people actually
               watch — and remember.
             </p>
           </Reveal>
-          <Reveal delay={300}>
+          <Reveal delay={200}>
             <div className="hero-actions">
               <a href="#work" className="btn btn-primary">
                 See the work
@@ -114,10 +172,6 @@ export default function Home() {
               </a>
             </div>
           </Reveal>
-          <div className="hero-scroll-hint" aria-hidden="true">
-            <span>Scroll</span>
-            <div className="hero-scroll-line" />
-          </div>
         </section>
 
         {/* MARQUEE */}
@@ -169,6 +223,25 @@ export default function Home() {
             {WORK.map((w, i) => (
               <Reveal key={w.title} delay={(i % 3) * 100}>
                 <WorkCard {...w} />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <section className="section" id="testimonials" data-palette>
+          <Reveal>
+            <p className="eyebrow">Client stories</p>
+            <h2 className="section-title">
+              Hear it from
+              <br />
+              the people we filmed for.
+            </h2>
+          </Reveal>
+          <div className="testimonials-grid">
+            {TESTIMONIALS.map((t, i) => (
+              <Reveal key={t.num} delay={i * 100}>
+                <TestimonialCard {...t} />
               </Reveal>
             ))}
           </div>
@@ -249,7 +322,7 @@ export default function Home() {
 
       <footer className="footer">
         <span className="footer-logo">
-          MYNKA<span className="nav-logo-dot">™</span>
+          MYNKA<span className="nav-logo-dot">.</span>
         </span>
         <span className="footer-copy">
           © {new Date().getFullYear()} MYNKA. Video production &amp; advertising.
