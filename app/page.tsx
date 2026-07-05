@@ -177,13 +177,12 @@ export default function Home() {
         {logos.length > 0 && (
           <div className="marquee logo-marquee" aria-label="Our clients">
             <div className="marquee-track logo-track">
-              {[...logos, ...logos].map((logo, i) => (
+              {logos.map((logo, i) => (
                 <img
                   key={i}
                   className="client-logo"
                   src={logo.src}
                   alt={logo.alt}
-                  aria-hidden={i >= logos.length}
                 />
               ))}
             </div>

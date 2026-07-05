@@ -195,6 +195,21 @@ h1, h2, h3, .nav-logo, .footer-logo {
   transition: background 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease;
 }
 
+/* scanlines like the background, a touch lighter so the bar reads distinct */
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(20, 5, 14, 0.018) 0px,
+    rgba(20, 5, 14, 0.018) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
 .nav-scrolled {
   padding-top: 14px;
   padding-bottom: 14px;
@@ -466,7 +481,21 @@ h1, h2, h3, .nav-logo, .footer-logo {
   to { transform: translateX(-50%); }
 }
 
-/* client logo row */
+/* client logo row — user-scrollable, scrollbar hidden */
+.logo-marquee {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.logo-marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.logo-marquee .marquee-track {
+  animation: none;
+}
+
 .logo-track {
   display: flex;
   align-items: center;
@@ -1012,9 +1041,13 @@ h1, h2, h3, .nav-logo, .footer-logo {
   }
 }
 
-/* mobile: shorter hero runway so the cover scroll doesn't drag on */
+/* mobile: shorter hero runway so the cover scroll doesn't drag on;
+   no room to stagger the process steps, so hide the roadmap */
 @media (max-width: 900px) {
   .hero {
     min-height: 125svh;
+  }
+  .process-road {
+    display: none;
   }
 }
