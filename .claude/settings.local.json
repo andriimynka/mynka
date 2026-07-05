@@ -23,7 +23,8 @@
       "Bash(git commit -m 'Replace text marquee with auto-loading client logo marquee from /public/logos *)",
       "Bash(sed -i '' '/<p className=\"eyebrow\">/d' app/page.tsx)",
       "Bash(sed -i '' 's|<span className=\"hero-video-note\">Header video coming soon</span>||' app/page.tsx)",
-      "Bash(git commit -m 'Remove eyebrow labels and video placeholder text entirely *)"
+      "Bash(git commit -m 'Remove eyebrow labels and video placeholder text entirely *)",
+      "Bash(git commit -m 'Add shake hover to stat boxes *)"
     ]
   }
 }

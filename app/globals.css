@@ -827,6 +827,10 @@ h1, h2, h3, .nav-logo, .footer-logo {
   transform: rotate(var(--tilt, 0deg));
 }
 
+.stat:hover {
+  animation: shake 0.35s linear infinite;
+}
+
 .stat-value {
   font-family: var(--font-display), sans-serif;
   font-size: clamp(1.9rem, 4vw, 2.6rem);
