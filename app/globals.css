@@ -51,7 +51,8 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  overflow-x: hidden;
+  /* clip, not hidden: hidden would break position: sticky in the hero */
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -358,7 +359,27 @@ h1, h2, h3, .nav-logo, .footer-logo {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  padding: clamp(170px, 24vh, 280px) clamp(20px, 5vw, 64px) 40px;
+  padding: 0 clamp(20px, 5vw, 64px) 40px;
+  /* runway so the sticky wordmark stays pinned until the video
+     has scrolled fully over it */
+  min-height: 195svh;
+}
+
+/* full-viewport band: on load only the wordmark is visible, video below the
+   fold. Sticky pins the wordmark so the video scrolls up and covers it. */
+.hero-logo-band {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-video-reveal {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-wordmark {
@@ -367,7 +388,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
   line-height: 0.95;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-bottom: clamp(70px, 13vh, 150px);
+  will-change: transform;
 }
 
 .hero-wordmark-dot {
@@ -380,7 +401,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 1px solid rgba(20, 5, 14, 0.3);
-  background: rgba(255, 255, 255, 0.5);
+  background: #fdfbfc; /* opaque so it fully covers the wordmark on scroll */
   display: flex;
   align-items: center;
   justify-content: center;

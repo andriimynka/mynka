@@ -15,7 +15,8 @@
       "Bash(git commit -m 'Y2K redesign: sharp corners, mono accents, hard shadows, scanlines, shake hovers, solid text colors *)",
       "Bash(git commit -m 'Restructure hero: MYNKA wordmark + header video slot; add staggered video testimonials; drop TM marks *)",
       "Bash(git commit -m 'Light theme with subtle gradient; collage layout with tilted, staggered, overlapping elements *)",
-      "Bash(git commit -m 'Add more vertical breathing room around the hero MYNKA wordmark *)"
+      "Bash(git commit -m 'Add more vertical breathing room around the hero MYNKA wordmark *)",
+      "Bash(git commit -m 'Full-viewport hero wordmark with scroll-over video cover and slight parallax *)"
     ]
   }
 }

@@ -1,4 +1,5 @@
 import GradientBackground from "@/components/GradientBackground";
+import HeroWordmark from "@/components/HeroWordmark";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -122,12 +123,8 @@ export default function Home() {
       <main id="top">
         {/* HERO */}
         <section className="hero" data-palette>
-          <Reveal>
-            <h1 className="hero-wordmark">
-              MYNKA<span className="hero-wordmark-dot">.</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={150}>
+          <HeroWordmark />
+          <Reveal delay={150} className="hero-video-reveal">
             {getYouTubeId(HERO_VIDEO) ? (
               <div className="hero-video">
                 <iframe
