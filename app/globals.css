@@ -551,12 +551,13 @@ h1, h2, h3, .nav-logo, .footer-logo {
   position: relative;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
-  border: 1px solid var(--line);
   overflow: hidden;
   padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: #ffdfec;
+  border: 1.5px solid var(--text);
   transform: rotate(var(--tilt, 0deg));
   transition: border-color 0.35s ease;
 }
@@ -573,29 +574,9 @@ h1, h2, h3, .nav-logo, .footer-logo {
   animation: shake 0.35s linear infinite;
 }
 
+/* flat light-pink cards, black outline */
 .work-card-glow {
-  position: absolute;
-  inset: 0;
-  opacity: 0.9;
-  transition: opacity 0.35s ease;
-}
-
-.work-card:hover .work-card-glow {
-  opacity: 1;
-}
-
-.work-card-1 .work-card-glow { background: linear-gradient(135deg, #ff1493 0%, #7c3aed 100%); }
-.work-card-2 .work-card-glow { background: linear-gradient(135deg, #ff6b35 0%, #ff2d7d 100%); }
-.work-card-3 .work-card-glow { background: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%); }
-.work-card-4 .work-card-glow { background: linear-gradient(135deg, #22d3ee 0%, #ff2d7d 100%); }
-.work-card-5 .work-card-glow { background: linear-gradient(135deg, #d4145a 0%, #38bdf8 100%); }
-.work-card-6 .work-card-glow { background: linear-gradient(135deg, #8b5cf6 0%, #ff1493 100%); }
-
-.work-card-glow::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10, 2, 8, 0.1) 30%, rgba(10, 2, 8, 0.75) 100%);
+  display: none;
 }
 
 .work-tag {
@@ -608,11 +589,10 @@ h1, h2, h3, .nav-logo, .footer-logo {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   padding: 6px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--text);
+  border: 1px solid var(--text);
   border-radius: 0;
-  background: rgba(10, 2, 8, 0.45);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: transparent;
 }
 
 .work-meta {
@@ -626,7 +606,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
 }
 
 .work-meta p {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-dim);
   font-size: 0.9rem;
 }
 
@@ -719,7 +699,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
 
 .testimonial-quote {
   font-size: 1.05rem;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 14px;
 }
 
@@ -727,9 +707,6 @@ h1, h2, h3, .nav-logo, .footer-logo {
   font-size: 1.15rem;
 }
 
-.testi-1 .work-card-glow { background: linear-gradient(160deg, #22d3ee 0%, #ff2d7d 100%); }
-.testi-2 .work-card-glow { background: linear-gradient(160deg, #ff1493 0%, #7c3aed 100%); }
-.testi-3 .work-card-glow { background: linear-gradient(160deg, #7c3aed 0%, #22d3ee 100%); }
 
 @media (max-width: 900px) {
   .testimonials-grid {
