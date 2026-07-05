@@ -406,6 +406,7 @@ h1, h2, h3, .nav-logo, .footer-logo {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  min-height: min(72svh, 56.25vw); /* big enough to blanket the wordmark */
 }
 
 .hero-video-note {
@@ -897,12 +898,6 @@ h1, h2, h3, .nav-logo, .footer-logo {
     position: relative;
   }
 
-  /* hero: video slot shoved right, clear of the wordmark */
-  .hero-video {
-    width: 88%;
-    margin-left: 12%;
-  }
-
   .statement {
     margin-left: 5%;
   }
@@ -985,5 +980,12 @@ h1, h2, h3, .nav-logo, .footer-logo {
   .process-item {
     flex-direction: column;
     gap: 8px;
+  }
+}
+
+/* mobile: shorter hero runway so the cover scroll doesn't drag on */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 125svh;
   }
 }

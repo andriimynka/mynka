@@ -18,7 +18,12 @@ export default function HeroWordmark() {
     const onScroll = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
-        el.style.transform = `translateY(${-window.scrollY * 0.12}px)`;
+        const y = window.scrollY;
+        el.style.transform = `translateY(${-y * 0.12}px)`;
+        // fade out as the video approaches, fully gone by ~70% viewport
+        el.style.opacity = String(
+          Math.max(0, 1 - y / (window.innerHeight * 0.7))
+        );
       });
     };
 
