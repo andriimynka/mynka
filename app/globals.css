@@ -475,6 +475,28 @@ h1, h2, h3, .nav-logo, .footer-logo {
   to { transform: translateX(-50%); }
 }
 
+/* client logo row */
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 6vw, 88px);
+  padding: 0 clamp(20px, 3vw, 44px);
+}
+
+.client-logo {
+  height: clamp(28px, 3.4vw, 44px);
+  width: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  filter: grayscale(1);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.client-logo:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none;

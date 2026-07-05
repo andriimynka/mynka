@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import TestimonialCard from "@/components/TestimonialCard";
 import WorkCard from "@/components/WorkCard";
 import { getYouTubeId } from "@/components/youtube";
+import { getClientLogos } from "@/components/logos";
 
 // Paste a YouTube link here and the header video slot under the MYNKA
 // wordmark will play it (muted, looping). Leave "" for the placeholder.
@@ -116,6 +117,7 @@ const STATS = [
 ];
 
 export default function Home() {
+  const logos = getClientLogos();
   return (
     <>
       <GradientBackground />
@@ -171,17 +173,22 @@ export default function Home() {
           </Reveal>
         </section>
 
-        {/* MARQUEE */}
-        <div className="marquee" aria-hidden="true">
-          <div className="marquee-track">
-            {Array.from({ length: 2 }).map((_, i) => (
-              <span key={i}>
-                Brand Films ✦ Commercials ✦ Social Campaigns ✦ Product Launches
-                ✦ Music Videos ✦ Documentaries ✦&nbsp;
-              </span>
-            ))}
+        {/* CLIENT LOGO MARQUEE */}
+        {logos.length > 0 && (
+          <div className="marquee logo-marquee" aria-label="Our clients">
+            <div className="marquee-track logo-track">
+              {[...logos, ...logos].map((logo, i) => (
+                <img
+                  key={i}
+                  className="client-logo"
+                  src={logo.src}
+                  alt={logo.alt}
+                  aria-hidden={i >= logos.length}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* SERVICES */}
         <section className="section" id="services" data-palette>
