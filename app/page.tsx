@@ -14,22 +14,22 @@ const SERVICES = [
   {
     num: "01",
     title: "Video Production",
-    body: "Concept to final cut. Brand films, product launches, and documentaries shot with cinematic craft and zero filler.",
+    body: "No-one reads text these days, your business needs videos. VSL's, Manifestos, Testimonials, How-to's. We tell your story.",
   },
   {
     num: "02",
     title: "Commercials & Advertising",
-    body: "TV spots, social-first ads, and performance creative engineered to stop thumbs and move numbers.",
+    body: "It's a social first world, and that's what we believe in. We will produce and run social ads better than anyone in the space",
   },
   {
     num: "03",
     title: "Brand & Campaign Strategy",
-    body: "Positioning, messaging, and campaign architecture — so every frame ladders up to a story worth remembering.",
+    body: "This one is my favorite, I get to interrogate you with questions to later tell you what your business does. And sometimes make a logo and colors to match",
   },
   {
     num: "04",
-    title: "Post & Motion Design",
-    body: "Editing, color, sound, VFX, and motion graphics that give your footage a pulse and your brand a signature.",
+    title: "Consulting",
+    body: "Wanna do it yourself, but need a bit of a hand? Shoot me an email, we'll grab coffee and I'll tell you all I know",
   },
 ];
 
@@ -37,12 +37,12 @@ const SERVICES = [
 // youtu.be/..., or a Shorts link) and that square becomes playable.
 // Leave it as "" to show the card without a play button.
 const WORK = [
-  { tag: "Brand Film", title: "Neon District", client: "Streetwear launch", theme: "work-card-1", video: "" },
-  { tag: "TV Spot", title: "Full Volume", client: "Audio hardware", theme: "work-card-2", video: "" },
-  { tag: "Social Campaign", title: "48 Hours In", client: "Travel platform", theme: "work-card-3", video: "" },
-  { tag: "Product Launch", title: "First Light", client: "EV startup", theme: "work-card-4", video: "" },
-  { tag: "Documentary", title: "Makers of the City", client: "Cultural fund", theme: "work-card-5", video: "" },
-  { tag: "Music Video", title: "Static Bloom", client: "Recording artist", theme: "work-card-6", video: "" },
+  { tag: "Brand Film", title: "Birth of a Cabinet Door", client: "Panhandle Door", theme: "work-card-1", video: "" },
+  { tag: "Organic Content", title: "Big Logs", client: "Caribou Creek", theme: "work-card-2", video: "" },
+  { tag: "Social Campaign", title: "Framing America", client: "Mayor Construction", theme: "work-card-3", video: "" },
+  { tag: "Product Commercial", title: "It Floats", client: "Power Batt", theme: "work-card-4", video: "" },
+  { tag: "Impact Story", title: "You are a Light", client: "Generation Alive", theme: "work-card-5", video: "" },
+  { tag: "Educational", title: "How to Work", client: "Noble Healthcare", theme: "work-card-6", video: "" },
 ];
 
 // Paste a YouTube link into `video` for each client testimonial.
@@ -77,34 +77,34 @@ const TESTIMONIALS = [
 const PROCESS = [
   {
     step: "Discover",
-    body: "We dig into your brand, audience, and goals until the brief writes itself.",
+    body: "We dig into your brand, audience, and goals to understand you better than you do.",
   },
   {
-    step: "Script & Storyboard",
-    body: "Concepts, scripts, and boards you can react to — before a single light is rigged.",
+    step: "Launch Fast",
+    body: "Run ads to get you clients, because that's what you care about",
   },
   {
-    step: "Shoot",
-    body: "Tight crews, cinema glass, and directors who protect the idea on set.",
+    step: "Make Art",
+    body: "Produce content and ads that perfectly fit your brand and work together for you",
   },
   {
     step: "Post & Launch",
-    body: "Edit, color, sound, and versioning for every platform. Then we ship it loud.",
+    body: "This is when you get to work, because if we've done our job, you should have plenty of it",
   },
 ];
 
 const PRINCIPLES = [
   {
-    title: "No AI. Anywhere.",
-    body: "We do not use AI to write scripts or make videos. People write the words. People shoot the film. People do the edit. That is the whole point of hiring us.",
+    title: "No AI. Anywhere*",
+    body: "I might have made this website with AI, but we never let AI do the creative work, your brand is your baby and our promise is only real people will lay hand on it.",
   },
   {
-    title: "The owner runs every project.",
-    body: "MYNKA is owner-run. I am in every project from the first call to the final cut. Nothing goes to a client before I have seen it myself.",
+    title: "US Based, US ran.",
+    body: "I'm Andrii Mynka, the Founder of MYNKA. and I get to touch and oversee every project. Your business is curated, and never blindly outsourced",
   },
   {
-    title: "No blind outsourcing.",
-    body: "Your project does not get passed to a team overseas you will never meet. The people you talk to are the people who do the work.",
+    title: "We Deliver. On Time.",
+    body: "When I started my first agency I was late on pretty much every project, and no business wants to receive a product like that. At MYNKA. we deliver before deadlines. Every time.",
   },
 ];
 
@@ -188,9 +188,9 @@ export default function Home() {
           <Reveal>
             <p className="eyebrow">What we do</p>
             <h2 className="section-title">
-              Full-stack storytelling,
+              You need it,
               <br />
-              from brief to broadcast.
+              We do it.
             </h2>
           </Reveal>
           <div className="services-grid">
@@ -211,9 +211,9 @@ export default function Home() {
           <Reveal>
             <p className="eyebrow">Selected work</p>
             <h2 className="section-title">
-              Stories we&apos;ve told.
+              Some things we do.
               <br />
-              Numbers we&apos;ve moved.
+              In case you&apos;re not sold yet.
             </h2>
           </Reveal>
           <div className="work-grid">
@@ -249,9 +249,9 @@ export default function Home() {
           <Reveal>
             <p className="eyebrow">Our process</p>
             <h2 className="section-title">
-              A process built
+              You work fast
               <br />
-              for momentum.
+              We work faster.
             </h2>
           </Reveal>
           <ol className="process-list">
@@ -307,11 +307,10 @@ export default function Home() {
               worth telling?
             </h2>
             <p className="hero-sub contact-sub">
-              Tell us what you&apos;re building. We&apos;ll bring the cameras,
-              the strategy, and the audacity.
+              Tell us what you&apos;re building. And we will send it to the moon. (Not literally, unless you're building spaceships)
             </p>
-            <a href="mailto:hello@mynka.agency" className="btn btn-primary btn-large">
-              hello@mynka.agency
+            <a href="mailto:andrii@mynka.us" className="btn btn-primary btn-large">
+              andrey@mtmcreative.me
             </a>
           </Reveal>
         </section>
