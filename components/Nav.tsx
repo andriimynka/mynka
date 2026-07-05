@@ -22,7 +22,7 @@ export default function Nav() {
   return (
     <header className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
       <a href="#top" className="nav-logo">
-        MYNKA<span className="nav-logo-dot">.</span>
+        MYNKA<span className="nav-logo-dot">™</span>
       </a>
       <nav className="nav-links">
         {LINKS.map((l) => (

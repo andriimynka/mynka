@@ -125,8 +125,8 @@ export default function Home() {
           <div className="marquee-track">
             {Array.from({ length: 2 }).map((_, i) => (
               <span key={i}>
-                Brand Films — Commercials — Social Campaigns — Product Launches
-                — Music Videos — Documentaries —&nbsp;
+                Brand Films ✦ Commercials ✦ Social Campaigns ✦ Product Launches
+                ✦ Music Videos ✦ Documentaries ✦&nbsp;
               </span>
             ))}
           </div>
@@ -248,7 +248,9 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        <span className="footer-logo">MYNKA</span>
+        <span className="footer-logo">
+          MYNKA<span className="nav-logo-dot">™</span>
+        </span>
         <span className="footer-copy">
           © {new Date().getFullYear()} MYNKA. Video production &amp; advertising.
         </span>
