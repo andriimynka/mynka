@@ -309,8 +309,8 @@ export default function Home() {
             <p className="hero-sub contact-sub">
               Tell us what you&apos;re building. And we will send it to the moon. (Not literally, unless you're building spaceships)
             </p>
-            <a href="mailto:andrii@mynka.us" className="btn btn-primary btn-large">
-              andrey@mtmcreative.me
+            <a href="mailto:andrey@mtmcreative.me" className="btn btn-primary btn-large">
+              andrii@mynka.us
             </a>
           </Reveal>
         </section>
