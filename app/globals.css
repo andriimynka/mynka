@@ -1,4 +1,8 @@
 :root {
+  --font-display: "Neue Haas Grotesk Display Pro", "Neue Haas Display",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Neue Haas Grotesk Text Pro", "Neue Haas Text",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
   --pink: #ff2d7d;
   --pink-hot: #ff1493;
   --violet: #7c3aed;
@@ -199,14 +203,14 @@ h1, h2, h3, .nav-logo, .footer-logo {
   padding: 10px 22px;
   font-size: 0.9rem;
   color: #fff;
-  background: linear-gradient(120deg, var(--pink), var(--violet));
+  background: var(--pink);
 }
 
 .btn-primary {
   padding: 16px 36px;
   font-size: 1.05rem;
   color: #fff;
-  background: linear-gradient(120deg, var(--pink-hot), var(--pink) 55%, var(--violet));
+  background: var(--pink-hot);
   box-shadow: 0 8px 40px rgba(255, 45, 125, 0.35);
 }
 

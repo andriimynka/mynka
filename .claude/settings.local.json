@@ -4,7 +4,10 @@
       "Bash(npm --version)",
       "Read(//opt/homebrew/bin/**)",
       "Read(//Users/andriimynka/.volta/**)",
-      "Bash(brew --version)"
+      "Bash(brew --version)",
+      "Bash(gh auth *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Switch to Neue Haas Grotesk font stack, make buttons solid pink *)"
     ]
   }
 }
