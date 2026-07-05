@@ -720,7 +720,42 @@ h1, h2, h3, .nav-logo, .footer-logo {
 
 /* ---------- process ---------- */
 
+.process-wrap {
+  position: relative;
+}
+
+/* dotted roadmap connecting the step numbers */
+.process-road {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+.process-road path {
+  stroke: var(--pink-hot);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 0.1 14;
+  animation: road-flow 1.4s linear infinite;
+}
+
+@keyframes road-flow {
+  to { stroke-dashoffset: -14.1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-road path {
+    animation: none;
+  }
+}
+
 .process-list {
+  position: relative;
+  z-index: 1;
   list-style: none;
   display: grid;
   gap: 0;

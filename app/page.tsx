@@ -1,6 +1,7 @@
 import GradientBackground from "@/components/GradientBackground";
 import HeroWordmark from "@/components/HeroWordmark";
 import Nav from "@/components/Nav";
+import ProcessRoadmap from "@/components/ProcessRoadmap";
 import Reveal from "@/components/Reveal";
 import TestimonialCard from "@/components/TestimonialCard";
 import WorkCard from "@/components/WorkCard";
@@ -256,19 +257,22 @@ export default function Home() {
               We work faster.
             </h2>
           </Reveal>
-          <ol className="process-list">
-            {PROCESS.map((p, i) => (
-              <Reveal key={p.step} delay={i * 100}>
-                <li className="process-item">
-                  <span className="process-index">{String(i + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h3>{p.step}</h3>
-                    <p>{p.body}</p>
-                  </div>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
+          <div className="process-wrap">
+            <ProcessRoadmap />
+            <ol className="process-list">
+              {PROCESS.map((p, i) => (
+                <Reveal key={p.step} delay={i * 100}>
+                  <li className="process-item">
+                    <span className="process-index">{i + 1}</span>
+                    <div>
+                      <h3>{p.step}</h3>
+                      <p>{p.body}</p>
+                    </div>
+                  </li>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
           <div className="stats-row">
             {STATS.map((s, i) => (
               <Reveal key={s.label} delay={i * 80}>

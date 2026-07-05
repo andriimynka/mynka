@@ -25,7 +25,8 @@
       "Bash(sed -i '' 's|<span className=\"hero-video-note\">Header video coming soon</span>||' app/page.tsx)",
       "Bash(git commit -m 'Remove eyebrow labels and video placeholder text entirely *)",
       "Bash(git commit -m 'Add shake hover to stat boxes *)",
-      "Bash(git commit -m 'Flat light-pink work and testimonial cards with black outlines *)"
+      "Bash(git commit -m 'Flat light-pink work and testimonial cards with black outlines *)",
+      "Bash(git commit -m 'Process: plain numbers 1-4, animated dotted roadmap connecting steps *)"
     ]
   }
 }
